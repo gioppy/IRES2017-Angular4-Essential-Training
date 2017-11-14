@@ -6,6 +6,6 @@
 4. L'evento deve essere "ascoltabile" all'esterno del componente
 5. Fermando il gioco, non devono essere emessi altri valori
 6. Gli altri due componenti, `Odd` ed `Even`, devono essere creati rispettivamente per i numeri pari e dispari
-7. Utilizza, per differenziarli, `Odd - NUMBER` o `Even - NUMBER` per i due componenti
-8. Utilizza degli stili appropriati per differenziare viivamente i due componenti
+7. Utilizza, per differenziarli, del testo del tipo `Odd - NUMBER` o `Even - NUMBER` per i due componenti
+8. Utilizza degli stili appropriati per differenziare visivamente i due componenti
 9. Aggiungi un nuovo bottone al componente `GameControl` per stoppare il gioco e per rimuovere tutti i componenti `Odd` ed `Event` fino a quel momento creati
