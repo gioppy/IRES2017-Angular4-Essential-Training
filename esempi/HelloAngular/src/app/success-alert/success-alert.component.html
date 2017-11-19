@@ -1,1 +1,8 @@
-<p class="alter-text">Everything ok!!!</p>
+<!--<p class="alter-text" [style.display]="showMessage ? 'block' : 'none'">Everything ok!!!</p>-->
+<!--<p class="alter-text" [ngClass]="{'element-hidden': !showMessage}">Everything ok!!!</p>-->
+<!--<p class="alter-text" [ngStyle]="{'display' : showMessage ? 'block' : 'none'}">Everything ok!!!</p>-->
+<p class="alter-text" *ngIf="showMessage; else hideMessage">Everything ok!!!</p>
+<ng-template #hideMessage>
+  <p>Text show on false!</p>
+</ng-template>
+<button type="button" (click)="sendMessage()">Send a message</button>

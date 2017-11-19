@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { LoggingService } from '../shared/logging.service';
 
 @Component({
   selector: 'app-warning-alert',
@@ -11,8 +12,19 @@ import { Component, Input } from '@angular/core';
     }
   `]
 })
-export class WarningAlertComponent {
+export class WarningAlertComponent implements OnInit {
   @Input() isHidden: boolean;
   @Input() alertMessage: string = 'This is a warning! Escape now!!!';
   redColor: string = '#ff0000';
+
+  constructor(private ls: LoggingService) {}
+
+  ngOnInit() {
+    this.ls.logMessageArray('Other string from other components')
+      .subscribe(
+        (values: number) => {
+          console.log(values);
+        }
+      )
+  }
 }

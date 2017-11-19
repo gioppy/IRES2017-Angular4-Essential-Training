@@ -1,5 +1,5 @@
 {
-  "name": "hello-angular",
+  "name": "messages-app",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -8,8 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "db": "json-server --watch json-server/db.json --port 3002"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

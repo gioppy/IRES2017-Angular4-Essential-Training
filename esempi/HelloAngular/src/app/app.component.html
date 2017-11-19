@@ -1,5 +1,15 @@
-<app-messages></app-messages>
-<p>This is another paragraph!</p>
-
 <app-warning-alert [alertMessage]="title" [isHidden]="hideMessage"></app-warning-alert>
-<app-success-alert></app-success-alert>
+<app-success-alert [showMessage]="showSuccessMessage" (onMessage)="handleMessage($event)"></app-success-alert>
+
+<hr>
+
+<ul>
+  <li *ngFor="let element of elements; let i = index" (click)="handleClick(i)">{{ i }}: {{ element }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let message of messages">
+    <h2>{{ message.title }}</h2>
+    <p>{{ message.message }}</p>
+  </li>
+</ul>
