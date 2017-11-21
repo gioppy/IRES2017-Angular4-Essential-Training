@@ -1,0 +1,88 @@
+<form>
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Nome e cognome</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control is-expanded">
+          <input class="input" type="text" placeholder="Nome" name="firstname" ngModel required />
+        </div>
+      </div>
+      <div class="field">
+        <div class="control is-expanded">
+          <input class="input" type="text" placeholder="Cognome" name="lastname" ngModel required>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Informazioni</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control is-expanded">
+          <input class="input" type="text" placeholder="Numero carta" name="cardnumber" ngModel required>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select name="month" ngModel required>
+              <option>MESI</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select name="year" ngModel required>
+              <option value="2020">20</option>
+              <option value="2021">21</option>
+              <option value="2022">22</option>
+              <option value="2023">23</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">CVV</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control is-expanded">
+          <input class="input" type="text" placeholder="CVV" name="cvv" ngModel required>
+        </div>
+      </div>
+    </div>
+    <div class="field-label is-normal">
+      <label class="label">Circuito</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select name="cardtype" ngModel required>
+              <option value="visa">VISA</option>
+              <option value="mastercard">MasterCard</option>
+              <option value="amex">America Express</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <button class="button is-primary" type="submit">Aggiungi</button>
+    </div>
+  </div>
+</form>
