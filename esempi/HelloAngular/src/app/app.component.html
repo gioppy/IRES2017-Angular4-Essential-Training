@@ -1,4 +1,4 @@
-<app-warning-alert [alertMessage]="title" [isHidden]="hideMessage"></app-warning-alert>
+<!--<app-warning-alert [alertMessage]="title" [isHidden]="hideMessage"></app-warning-alert>
 <app-success-alert [showMessage]="showSuccessMessage" (onMessage)="handleMessage($event)"></app-success-alert>
 
 <hr>
@@ -11,5 +11,19 @@
   <li *ngFor="let message of messages">
     <h2>{{ message.title }}</h2>
     <p>{{ message.message }}</p>
+  </li>
+</ul>-->
+<app-game-control (onGameBegin)="gameBegin($event)" (onGameClear)="gameClear()"></app-game-control>
+
+<hr />
+
+<ul>
+  <li *ngFor="let item of numbers">
+    <app-even *ngIf="item % 2 === 0; else oddNumber" [num]="item"></app-even>
+    <ng-template #oddNumber>
+      <app-odd [num]="item"></app-odd>
+    </ng-template>
+    <!--<app-even *ngIf="item % 2 === 0"></app-even>
+    <app-odd *ngIf="item % 2 !== 0"></app-odd>-->
   </li>
 </ul>

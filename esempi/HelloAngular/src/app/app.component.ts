@@ -8,7 +8,7 @@ import { IMessage } from './shared/message.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  /*title = 'app';
   hideMessage: boolean = true;
   showSuccessMessage: boolean = true;
   elements: number[] = [1,2,3,4,5,6,7,8,9,10];
@@ -31,5 +31,20 @@ export class AppComponent {
 
   handleMessage(value: boolean) {
     this.showSuccessMessage = value;
+  }*/
+
+  numbers: number[] = [];
+
+  /**
+   * Inizio del gioco
+   * @param {number} value
+   *    il valore emesso dal componente GameControl
+   */
+  gameBegin(value: number) {
+    this.numbers.push(value);
+  }
+
+  gameClear() {
+    this.numbers.splice(0);
   }
 }
